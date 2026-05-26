@@ -1,4 +1,4 @@
-# #!/usr/bin/env bash
+#!/usr/bin/env bash
 # Change your home IP
 ping -c 1 localhost
 ping -c 1 facebook.com
