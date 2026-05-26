@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Revert your home IP
+
+cp /etc/hosts /tmp/hosts.$$
+sed 's/^127\.0\.0\.2\(.*localhost\)/127.0.0.1\1/' /tmp/hosts.$$ > /tmp/hosts.$$.tmp
+sed '/facebook\.com/d' /tmp/hosts.$$.tmp > /tmp/hosts.$$.tmp2
+cp /tmp/hosts.$$.tmp2 /etc/hosts
